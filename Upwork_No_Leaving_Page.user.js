@@ -8,7 +8,7 @@
 // ==/UserScript==
 
 ((window, undefined) => {
-	var w = (typeof unsafeWindow !== undefined) ? unsafeWindow : window;
+	var w = (typeof unsafeWindow !== 'undefined') ? unsafeWindow : window;
 	if(w.self !== w.top) return; // don't run in frames
 	if(!/^https:\/\/www.upwork.com\/leaving\?ref=/.test(w.location.href)) return; // duplicate "include" checking
 
